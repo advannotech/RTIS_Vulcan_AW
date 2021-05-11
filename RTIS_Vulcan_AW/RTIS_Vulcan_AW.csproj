@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9F4417A-FC5A-4663-BBC0-8A185AB6BF43}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RTIS_Vulcan_AW</RootNamespace>
+    <AssemblyName>RTIS_Vulcan_AW</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Reltech 64x64 Circle.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2.UI, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.2.Wizard, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.2.Extensions, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>.\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>.\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>.\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="wifi">
+      <HintPath>.\wifi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Barcodes.cs" />
+    <Compile Include="Classes\Client.cs" />
+    <Compile Include="Classes\ExHandler.cs" />
+    <Compile Include="Classes\GlobalVars.cs" />
+    <Compile Include="Classes\Labels.cs" />
+    <Compile Include="Classes\SQLite.cs" />
+    <Compile Include="Classes\WifiChecker.cs" />
+    <Compile Include="Controls\Print Tags\Reprint\cntrlPallet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Print Tags\Reprint\cntrlPallet.Designer.cs">
+      <DependentUpon>cntrlPallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReOpen Job\cntrlROLot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReOpen Job\cntrlROLot.Designer.cs">
+      <DependentUpon>cntrlROLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReOpen Job\ucManualReOpen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReOpen Job\ucManualReOpen.Designer.cs">
+      <DependentUpon>ucManualReOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReOpen Job\ucReOpeninfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReOpen Job\ucReOpeninfo.Designer.cs">
+      <DependentUpon>ucReOpeninfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReOpen Job\ucReOpenOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReOpen Job\ucReOpenOptions.Designer.cs">
+      <DependentUpon>ucReOpenOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReOpen Job\ucScanToReopen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReOpen Job\ucScanToReopen.Designer.cs">
+      <DependentUpon>ucScanToReopen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReOpen Job\ucSelectReopnLot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReOpen Job\ucSelectReopnLot.Designer.cs">
+      <DependentUpon>ucSelectReopnLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Reprint Job Tags\ucRPInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Reprint Job Tags\ucRPInformation.Designer.cs">
+      <DependentUpon>ucRPInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Reprint Job Tags\cntrlRPLot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Reprint Job Tags\cntrlRPLot.Designer.cs">
+      <DependentUpon>cntrlRPLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\General\ucMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\General\ucMenu.Designer.cs">
+      <DependentUpon>ucMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Keyboard\cntrlNumPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Keyboard\cntrlNumPad.Designer.cs">
+      <DependentUpon>cntrlNumPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Keyboard\cntrlOmniPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Keyboard\cntrlOmniPad.Designer.cs">
+      <DependentUpon>cntrlOmniPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Open Job\cntrlPGMItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Open Job\cntrlPGMItem.Designer.cs">
+      <DependentUpon>cntrlPGMItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Open Job\ucJobQty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Open Job\ucJobQty.Designer.cs">
+      <DependentUpon>ucJobQty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Open Job\ucMaunalOpen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Open Job\ucMaunalOpen.Designer.cs">
+      <DependentUpon>ucMaunalOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Open Job\ucOpenOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Open Job\ucOpenOptions.Designer.cs">
+      <DependentUpon>ucOpenOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Open Job\ucScanToOpen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Open Job\ucScanToOpen.Designer.cs">
+      <DependentUpon>ucScanToOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Open Job\ucSelectPGM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Open Job\ucSelectPGM.Designer.cs">
+      <DependentUpon>ucSelectPGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Print Tags\ucPrintType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Print Tags\ucPrintType.Designer.cs">
+      <DependentUpon>ucPrintType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Print Tags\Print\ucQtyToPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Print Tags\Print\ucQtyToPrint.Designer.cs">
+      <DependentUpon>ucQtyToPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Settings\ucPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Settings\ucPassword.Designer.cs">
+      <DependentUpon>ucPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Settings\ucSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Settings\ucSettings.Designer.cs">
+      <DependentUpon>ucSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\General\ucLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\General\ucLogin.Designer.cs">
+      <DependentUpon>ucLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Print Tags\ucScanConfig_PT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Print Tags\ucScanConfig_PT.Designer.cs">
+      <DependentUpon>ucScanConfig_PT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmError.Designer.cs">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMsg.Designer.cs">
+      <DependentUpon>frmMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Reprint Job Tags\ucRPScanSheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Reprint Job Tags\ucRPScanSheet.Designer.cs">
+      <DependentUpon>ucRPScanSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Reprint Job Tags\ucRPSelectLotNumbers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Reprint Job Tags\ucRPSelectLotNumbers.Designer.cs">
+      <DependentUpon>ucRPSelectLotNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Print Tags\Reprint\ucPalletList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Print Tags\Reprint\ucPalletList.Designer.cs">
+      <DependentUpon>ucPalletList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Close Job\ucScanTag_CJ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Close Job\ucScanTag_CJ.Designer.cs">
+      <DependentUpon>ucScanTag_CJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Close Job\ucJobInfo_CJ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Close Job\ucJobInfo_CJ.Designer.cs">
+      <DependentUpon>ucJobInfo_CJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConfirm.Designer.cs">
+      <DependentUpon>frmConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\Print Tags\Reprint\cntrlPallet.resx">
+      <DependentUpon>cntrlPallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReOpen Job\cntrlROLot.resx">
+      <DependentUpon>cntrlROLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReOpen Job\ucManualReOpen.resx">
+      <DependentUpon>ucManualReOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReOpen Job\ucReOpeninfo.resx">
+      <DependentUpon>ucReOpeninfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReOpen Job\ucReOpenOptions.resx">
+      <DependentUpon>ucReOpenOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReOpen Job\ucScanToReopen.resx">
+      <DependentUpon>ucScanToReopen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReOpen Job\ucSelectReopnLot.resx">
+      <DependentUpon>ucSelectReopnLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Reprint Job Tags\ucRPInformation.resx">
+      <DependentUpon>ucRPInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Reprint Job Tags\cntrlRPLot.resx">
+      <DependentUpon>cntrlRPLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\General\ucLogin.resx">
+      <DependentUpon>ucLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\General\ucMenu.resx">
+      <DependentUpon>ucMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Keyboard\cntrlNumPad.resx">
+      <DependentUpon>cntrlNumPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Keyboard\cntrlOmniPad.resx">
+      <DependentUpon>cntrlOmniPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Open Job\cntrlPGMItem.resx">
+      <DependentUpon>cntrlPGMItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Open Job\ucJobQty.resx">
+      <DependentUpon>ucJobQty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Open Job\ucMaunalOpen.resx">
+      <DependentUpon>ucMaunalOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Open Job\ucOpenOptions.resx">
+      <DependentUpon>ucOpenOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Open Job\ucScanToOpen.resx">
+      <DependentUpon>ucScanToOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Open Job\ucSelectPGM.resx">
+      <DependentUpon>ucSelectPGM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Print Tags\Print\ucQtyToPrint.resx">
+      <DependentUpon>ucQtyToPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Print Tags\ucPrintType.resx">
+      <DependentUpon>ucPrintType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Print Tags\ucScanConfig_PT.resx">
+      <DependentUpon>ucScanConfig_PT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Settings\ucPassword.resx">
+      <DependentUpon>ucPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Settings\ucSettings.resx">
+      <DependentUpon>ucSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmError.resx">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMsg.resx">
+      <DependentUpon>frmMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Reprint Job Tags\ucRPScanSheet.resx">
+      <DependentUpon>ucRPScanSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Reprint Job Tags\ucRPSelectLotNumbers.resx">
+      <DependentUpon>ucRPSelectLotNumbers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Print Tags\Reprint\ucPalletList.resx">
+      <DependentUpon>ucPalletList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Close Job\ucScanTag_CJ.resx">
+      <DependentUpon>ucScanTag_CJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Close Job\ucJobInfo_CJ.resx">
+      <DependentUpon>ucJobInfo_CJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConfirm.resx">
+      <DependentUpon>frmConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reltech 64x64 Circle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signalhigh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signallow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signalmedium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAT SCAN LOGO 300dpi TRANSPARENT.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAT SCAN LOGO 300dpi TRANSPARENT3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chargeaempty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chargeafull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chargeahalf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chargeempty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chargefull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chargehalf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\found.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IPaddress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levelaempty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levelafull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levelahalf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levelempty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levelfull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levelhalf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notfound2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\port.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Reltech 64x64 Circle.ico" />
+    <Content Include="SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
