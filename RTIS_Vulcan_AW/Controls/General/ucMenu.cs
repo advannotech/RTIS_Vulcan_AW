@@ -164,5 +164,12 @@ namespace RTIS_Vulcan_AW.Controls.General
                 ExHandler.showErrorEx(ex);
             }
         }
+
+        private void btnManualClose_Click(object sender, EventArgs e)
+        {
+            ucManualClose itemInfo = new ucManualClose(parent, main);
+            main.pnlMain.Controls.Clear();
+            main.pnlMain.Controls.Add(itemInfo);
+        }
     }
 }

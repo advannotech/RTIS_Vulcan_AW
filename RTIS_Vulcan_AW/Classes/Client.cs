@@ -945,5 +945,56 @@ namespace RTIS_Vulcan_AW.Classes
             }
         }
         #endregion
+
+        #region Manual Close   
+
+        public static string AWManualCloseJob(string lot)
+        {
+            string ServerDetails = "";
+
+            IPAddress ServerIPAddress = null;
+            ServerIPAddress = IPAddress.Parse(GlobalVars.ServerIP);
+            IPEndPoint ServerEP = new IPEndPoint(ServerIPAddress, Convert.ToInt32(GlobalVars.ServerPort));
+            Socket DataClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            try
+            {
+                byte[] sendbytes = new byte[21];
+                byte[] receivebytes = new byte[3];
+                ASCIIEncoding ascenc = new ASCIIEncoding();
+
+                DataClient.SendTimeout = 30000;
+                DataClient.ReceiveTimeout = 30000;
+
+                //Send start request
+                DataClient.Connect(ServerEP);
+
+                sendbytes = ascenc.GetBytes("*AWMANUALCLOSEJOB*@" + lot);
+                DataClient.Send(sendbytes);
+
+                receivebytes = new byte[131073];
+                int length = DataClient.Receive(receivebytes);
+                int count = length;
+                while (length != 0)
+                {
+                    for (int i = 0; i <= length - 1; i++)
+                    {
+                        ServerDetails += Convert.ToChar(receivebytes[i]);
+                        count = count - 1;
+                    }
+                    count = DataClient.Receive(receivebytes);
+                    length = count;
+                }
+
+                DataClient.Close();
+                return ServerDetails;
+            }
+            catch (Exception ex)
+            {
+                DataClient.Close();
+                return "-2*" + ex.Message;
+            }
+        }
+
+        #endregion
     }
 }
